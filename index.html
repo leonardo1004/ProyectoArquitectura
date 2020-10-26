@@ -5,48 +5,65 @@
 	<title>Tienda_Vitual</title>
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<body>
+<body> 		 
+	
+  <div class="tab">
+    <button class="tablinks" onclick="abrirCategoria(event, 'producto')" id="defaultOpen">Productos</button>
+    <button class="tablinks" onclick="abrirCategoria(event, 'registro_producto')">Registro Productos</button>
+  </div>
 
-	<form action="cgi-bin/.py" method="POST" id="ingreso">
-		<h1><center>Ingrese sus datos</center></h1>
-		<div>
-			<h4>
-				<center>
-					<input type="radio" name="op" id="i" value="registrar" checked="checked">Registrar
-		            <input type="radio" name="op" id="r" value="ingresar">Ingresar	
-	            </center>
-            </h4>
-		</div>
+  <div id="producto" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+    <center><h2>Productos</h2></center>
+    </br>
+    <div id="cd" class="ui cards stackable">
+                  
+    </div>
+  </div> 
+ 
 
-		<div>
-			<h4>Usuario:
-			<input type="text" name="usuario" id="caja1" class="registro" />
-		</div>
+  <div id="registro_producto" class="tabcontent">
+    <div id="contenido">
 
-		<div>
-			<h4>Password:
-			<input type="text" name="password" id="caja2" class="registro"/>
-		</div>
+      <form action="cgi-bin/gin.py" method="POST" id="registrar">
+        <h1><center>Registre sus producto</center></h1>
+          <div>
+            <h4>Usuario:
+            <input type="text" name="usuario" id="caja1" class="registro" />
+          </div>
 
-		<div>
-			<h4>Correo:
-			<input type="text" name="correo" id="caja3" class="registro"/>
-		</div>
+          <div>
+            <h4>ID:
+            <input type="text" name="id" id="caja3" class="registro"/>
+          </div>
 
-		<div>
-			<h4>Telefono:
-			<input type="text" name="telefono" id="caja4" class="registro"/>
-		</div>
+          <div>
+            <h4>Descripcion:
+            <input type="text" name="correo" id="caja4" class="registro"/>
+          </div>
 
-		<div>
-			<h4>Dirección:
-			<input type="text" name="direccion" id="caja5" class="registro"/>
-		</div>
+          <div>
+            <h4>Especificaciones:
+            <input type="text" name="telefono" id="caja5" class="registro"/>
+          </div>
 
-		<div></p>
-			<input type="submit" name="crear" id="crearP" />
-		</div>
-	</form>
+          <div>
+            <h4>Precio:
+            <input type="text" name="direccion" id="caja6" class="registro"/>
+          </div>
+
+          <div>
+            <h4>Cantidad:
+            <input type="text" name="direccion" id="caja7" class="registro"/>
+          </div>
+
+          <div></p>
+            <input type="submit" name="crear" id="crearP" />
+          </div>
+      </form>
+
+    </div>
+  </div>
 </body>
 <script src="js/script.js"></script>
 </html>

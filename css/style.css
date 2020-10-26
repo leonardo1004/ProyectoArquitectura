@@ -6,7 +6,8 @@ h4{
 	font-family: Arial;
 }
 
-#ingreso{
+
+#registrar{
   	float: center;
   	background: #FC8C30;
   	border-radius: .5em;
@@ -14,15 +15,16 @@ h4{
   	padding: 10px;
 }
 
-#ingreso{
+#registrar{
 	margin: 0 auto;
-  	width: 27%;
-  	height: 550px;
+  	width: 24%;
+  	height: 650px;
   	background: #FC8C30;
   	flex-wrap: wrap;
   	min-width: 300px;
   	margin-bottom: 0;
 }
+
 
 #crearP{
 	background-color: #EEEEDA;
@@ -40,3 +42,51 @@ h4{
   	background-color: #EEEEDA;
   	border-radius: 30px;
 }
+
+body {font-family: Arial;}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.gene{
+  height: 280px !Important;
+}
+
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.topright {
+  float: right;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.topright:hover {color: red;}
+
