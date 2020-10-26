@@ -1,0 +1,42 @@
+h1{
+	font-family: Arial;
+}
+
+h4{
+	font-family: Arial;
+}
+
+#ingreso{
+  	float: center;
+  	background: #FC8C30;
+  	border-radius: .5em;
+  	border: 1px solid #999;
+  	padding: 10px;
+}
+
+#ingreso{
+	margin: 0 auto;
+  	width: 27%;
+  	height: 550px;
+  	background: #FC8C30;
+  	flex-wrap: wrap;
+  	min-width: 300px;
+  	margin-bottom: 0;
+}
+
+#crearP{
+	background-color: #EEEEDA;
+  	border-radius: 30px;
+  	width: 100px;
+  	height: 40px;
+  	display:block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
+.registro{
+	width: 300px;
+  	height: 30px;
+  	background-color: #EEEEDA;
+  	border-radius: 30px;
+}
