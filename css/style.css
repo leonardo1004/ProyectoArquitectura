@@ -9,7 +9,6 @@ h4{
 
 #registrar{
   	float: center;
-  	background: #FC8C30;
   	border-radius: .5em;
   	border: 1px solid #999;
   	padding: 10px;
@@ -18,8 +17,9 @@ h4{
 #registrar{
 	margin: 0 auto;
   	width: 24%;
-  	height: 750px;
-  	background: #FC8C30;
+  	height: 450px;
+  	background: #FE891A;
+  	border: #FF2E00 10px groove;
   	flex-wrap: wrap;
   	min-width: 300px;
   	margin-bottom: 0;
@@ -27,7 +27,6 @@ h4{
 
 #registrarpersona{
   	float: center;
-  	background: #FC8C30;
   	border-radius: .5em;
   	border: 1px solid #999;
   	padding: 10px;
@@ -36,8 +35,9 @@ h4{
 #registrarpersona{
 	margin: 0 auto;
   	width: 24%;
-  	height: 350px;
-  	background: #FC8C30;
+  	height: 250px;
+  	background: #FE891A;
+  	border: #FF2E00 10px groove;
   	flex-wrap: wrap;
   	min-width: 300px;
   	margin-bottom: 0;
@@ -118,3 +118,7 @@ body {font-family: Arial;}
 
 .topright:hover {color: red;}
 
+*{
+	margin: 0px;
+	padding: 0px;
+}
