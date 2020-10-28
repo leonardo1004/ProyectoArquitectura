@@ -17,6 +17,8 @@ function abrirCategoria(evt, categoria) {
   
 }
 
+document.getElementById("defaultOpen").click();
+
 function ObtenerDatos(){
   var producto{
     usuario: $("#caja1").val(),
