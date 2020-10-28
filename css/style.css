@@ -18,7 +18,25 @@ h4{
 #registrar{
 	margin: 0 auto;
   	width: 24%;
-  	height: 650px;
+  	height: 750px;
+  	background: #FC8C30;
+  	flex-wrap: wrap;
+  	min-width: 300px;
+  	margin-bottom: 0;
+}
+
+#registrarpersona{
+  	float: center;
+  	background: #FC8C30;
+  	border-radius: .5em;
+  	border: 1px solid #999;
+  	padding: 10px;
+}
+
+#registrarpersona{
+	margin: 0 auto;
+  	width: 24%;
+  	height: 350px;
   	background: #FC8C30;
   	flex-wrap: wrap;
   	min-width: 300px;
@@ -27,6 +45,16 @@ h4{
 
 
 #crearP{
+	background-color: #EEEEDA;
+  	border-radius: 30px;
+  	width: 100px;
+  	height: 40px;
+  	display:block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
+#ingresado{
 	background-color: #EEEEDA;
   	border-radius: 30px;
   	width: 100px;
@@ -47,8 +75,8 @@ body {font-family: Arial;}
 
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  border: 1px solid #FF2E00;
+  background-color: #FF4D00;
 }
 
 .tab button {
@@ -63,11 +91,11 @@ body {font-family: Arial;}
 }
 
 .tab button:hover {
-  background-color: #ddd;
+  background-color: #FE891A;
 }
 
 .tab button.active {
-  background-color: #ccc;
+  background-color: #FE891A;
 }
 
 .gene{

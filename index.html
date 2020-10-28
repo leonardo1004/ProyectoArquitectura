@@ -5,7 +5,11 @@
 	<title>Tienda_Vitual</title>
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<body> 		 
+<body background="img/fondo.jpeg"> 		 
+
+  <div>
+    <img src="img/logo.jpeg" width="228" height="190" align="left"><center><h4>Presentado por: Leonardo Quintero y Nicolas Gonzalez</h4></p><h3>Si no es barato, no es Ete Sech</h3></center>
+  </div>
 	
   <div class="tab">
     <button class="tablinks" onclick="abrirCategoria(event, 'producto')" id="defaultOpen">Productos</button>
@@ -26,39 +30,39 @@
   <div id="registro_producto" class="tabcontent">
     <div id="contenido">
 
-      <form action="/cgi-bin/ProyectoArquitectura/gin.py" method="POST" id="registrar">
+      <form action="/cgi-bin/gin.py" method="POST" id="registrar">
         <h1><center>Registre sus producto</center></h1>
           <div>
-            <h4>Usuario:
-            <input type="text" name="usuario" id="caja1" class="registro" />
+            <h4>Usuario:</h4>
+            <input type="text" name="usuario" id="caja1" class="registro" placeholder="Nombre" />
           </div>
 
           <div>
-            <h4>ID:
-            <input type="text" name="id" id="caja2" class="registro"/>
+            <h4>ID:</h4>
+            <input type="text" name="id" id="caja2" class="registro" placeholder="Identidad" />
           </div>
 
           <div>
-            <h4>Descripcion:
+            <h4>Descripcion:</h4>
             <input type="text" name="des" id="caja3" class="registro"/>
           </div>
 
           <div>
-            <h4>Especificaciones:
-            <input type="text" name="espe" id="caja4" class="registro"/>
+            <h4>Especificaciones:</h4>
+            <input type="text" name="espe" id="caja4" class="registro"  />
           </div>
 
           <div>
-            <h4>Precio:
-            <input type="text" name="precio" id="caja5" class="registro"/>
+            <h4>Precio:</h4>
+            <input type="text" name="precio" id="caja5" class="registro" placeholder="Precio" />
           </div>
 
           <div>
-            <h4>Cantidad:
-            <input type="text" name="can" id="caja6" class="registro"/>
+            <h4>Cantidad:</h4>
+            <input type="text" name="can" id="caja6" class="registro" placeholder="Cantidad" />
           </div>
 
-          <div></p>
+          <div>
             <input type="submit" name="crear" id="crearP" />
           </div>
       </form>
@@ -68,19 +72,19 @@
   <div id="ingresar" class="tabcontent">
     <div id="login">
 
-      <form action="cgi-bin/ingreso2.py" method="POST" id="registrar">
+      <form action="cgi-bin/ingreso2.py" method="POST" id="registrarpersona">
         <h1><center>Registre sus producto</center></h1>
           <div>
-            <h4>Usuario:
-            <input type="text" name="usuario" id="caja1" class="registro" />
+            <h4>Usuario:</h4>
+            <input type="text" name="usuario" id="caja1" class="registro" placeholder="Usuario" />
           </div>
 
           <div>
-            <h4>Password:
-            <input type="text" name="password" id="caja2" class="registro"/>
+            <h4>Password:</h4>
+            <input type="text" name="password" id="caja2" class="registro"  />
           </div>
 
-          <div></p>
+          <div>
             <input type="submit" name="ingresado" id="ingresado" />
           </div>
       </form>
