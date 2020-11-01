@@ -16,8 +16,8 @@ h4{
 
 #contenido{
 	margin: 0 auto;
-  	width: 24%;
-  	height: 490px;
+  	width: 25%;
+  	height: 550px;
   	background: #FE891A;
   	border: #FF2E00 10px groove;
   	flex-wrap: wrap;
@@ -34,7 +34,7 @@ h4{
 
 #registrarpersona{
 	margin: 0 auto;
-  	width: 24%;
+  	width: 25%;
   	height: 250px;
   	background: #FE891A;
   	border: #FF2E00 10px groove;
@@ -141,4 +141,8 @@ body {font-family: Arial;}
 *{
 	margin: 0px;
 	padding: 0px;
+}
+
+body{
+  background-image: url("https://image.freepik.com/foto-gratis/textura-antigua-tablas-madera_1249-159.jpg");
 }

@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="css/semantic.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Tienda_Vitual</title>
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<body background="img/fondo.jpeg"> 		 
+<script src="js/semantic.js"></script>
+ <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous">
+</script>
+<body> 		 
 
   <div>
     <img src="img/logo.jpeg" width="228" height="190" align="left"><center><h4>Presentado por: Leonardo Quintero y Nicolas Gonzalez</h4></p><h3>Si no es barato, no es Ete Sech</h3></center>
@@ -20,10 +27,9 @@
   <div id="producto" class="tabcontent">
     <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
     <center><h2>Productos</h2></center>
-    </br>
     <button value="OK" id="botoncarta" class="button">Mostrar</button>
     <div id="cd" class="ui cards stackable">
-                  
+            
     </div>
   </div> 
  
@@ -44,8 +50,8 @@
           </div>
 
           <div>
-            <h4>Descripcion:</h4>
-            <input type="text" name="des" id="caja3" class="registro"/>
+            <h4>Producto:</h4>
+            <input type="text" name="des" id="caja3" class="registro" placeholder=" Nombre del producto"/>
           </div>
 
           <div>
@@ -67,7 +73,7 @@
             <input type="submit" name="crear" id="crearP" />
           </div>
       </form>
-      <button value="OK" id="botonprueba" class="button">Comprobar</button>
+        <button value="OK" id="botonprueba" class="button">Comprobar</button>
     </div>
   </div>
 

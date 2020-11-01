@@ -93,10 +93,10 @@ function traerDatos(){
   for (var i = 0; i<productos.length; i++){
     m+='<div class="card">\
         <div class="content">\
-          <img class="ui avatar image" src="img/desconocido.JPG">'+productos[i].usuario+'\
+          <img class="ui avatar image" src="img/Masculino.PNG">'+productos[i].usuario+'\
         </div>\
             <div class="image">\
-              <img src="img/desconocido.jpg" >\
+              <img src="img/Masculino.PNG" >\
             </div>\
               <div class="content">\
                   <a class="header"><center>'+productos[i].descripcion+'</center> </a>\
