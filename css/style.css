@@ -64,6 +64,16 @@ h4{
   	margin-right: auto;
 }
 
+#botoncarta{
+	background-color: #EEEEDA;
+  	border-radius: 30px;
+  	width: 100px;
+  	height: 40px;
+  	display:block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
 #ingresado{
 	background-color: #EEEEDA;
   	border-radius: 30px;

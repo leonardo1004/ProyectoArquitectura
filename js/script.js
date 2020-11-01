@@ -80,7 +80,7 @@ $("#botonprueba").click(function(){
   obtenerDatos();
 });
 
-$("#crearP").click(function(){ 
+$("#botoncarta").click(function(){ 
   traerDatos();
 });
 
