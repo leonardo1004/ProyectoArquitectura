@@ -19,7 +19,9 @@ function abrirCategoria(evt, categoria) {
 
 document.getElementById("defaultOpen").click();
 
-function productos(){
+var productos=[];
+
+function obtenerDatos(){
   var usuario = $('#caja1').val();
   if(usuario === ''){
     alert("Un campo esta vacio");
@@ -62,6 +64,7 @@ function productos(){
   }else{
     alert("Todo correcto, el Ete Sech lo aprueba");
   } 
+
   var producto={
     usuario: usuario,
     id: id,
@@ -74,6 +77,43 @@ function productos(){
 }
 
 $("#botonprueba").click(function(){ 
-  productos();
+  obtenerDatos();
 });
 
+$("#crearP").click(function(){ 
+  traerDatos();
+});
+
+function traerDatos(){
+  a=obtenerDatos();
+  productos.push(a);
+
+  m="";
+
+  for (var i = 0; i<productos.length; i++){
+    m+='<div class="card">\
+        <div class="content">\
+          <img class="ui avatar image" src="img/desconocido.JPG">'+productos[i].usuario+'\
+        </div>\
+            <div class="image">\
+              <img src="img/desconocido.jpg" >\
+            </div>\
+              <div class="content">\
+                  <a class="header"><center>'+productos[i].descripcion+'</center> </a>\
+                  <div class="meta">\
+                    <p>ID: <span class="identidad">'+productos[i].id+'</span></p>\
+                  </div>\
+                  <div class="meta">\
+                    <p>Cantidad: <span class="cantidad">'+productos[i].cantidad+'</span></p>\
+                  </div>\
+                  <div class="meta">\
+                    <p>Precio: <span class="precio">'+productos[i].precio+'</span></p>\
+                  </div>\
+                    <p>Especificaciones: <span class="especificaciones">'+productos[i].especificacion+'</span></p>\
+                  </div>\
+              </div>\
+          </div>'
+  }
+  $("#cd").empty();
+  $("#cd").append(m);
+}
