@@ -60,8 +60,9 @@ function productos(){
     alert("Un campo esta vacio");
     return false;
   }else{
- 
-  } var producto={
+    alert("Todo correcto, el Ete Sech lo aprueba");
+  } 
+  var producto={
     usuario: usuario,
     id: id,
     descripcion: description,
@@ -72,6 +73,7 @@ function productos(){
   return producto;
 }
 
-$("#crearP").click(function(){ 
-  productos()
+$("#botonprueba").click(function(){ 
+  productos();
 });
+
