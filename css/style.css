@@ -17,7 +17,7 @@ h4{
 #contenido{
 	margin: 0 auto;
   	width: 25%;
-  	height: 550px;
+  	height: 580px;
   	background: #FE891A;
   	border: #FF2E00 10px groove;
   	flex-wrap: wrap;
@@ -35,7 +35,7 @@ h4{
 #registrarpersona{
 	margin: 0 auto;
   	width: 25%;
-  	height: 250px;
+  	height: 295px;
   	background: #FE891A;
   	border: #FF2E00 10px groove;
   	flex-wrap: wrap;
