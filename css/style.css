@@ -1,19 +1,21 @@
+
+/*Cambia el tipo de letra de la etiqueta h1*/
 h1{
 	font-family: Arial;
 }
-
+/*Cambia el tipo de letra en la etiqueta h2*/
 h4{
 	font-family: Arial;
 }
 
-
+/*Cambia el estilo del id contenido*/
 #contenido{
   	float: center;
   	border-radius: .5em;
   	border: 1px solid #999;
-  	padding: 10px;
+    padding: 10px;
 }
-
+/*Cambia el diseño, marco y color del id contenido*/
 #contenido{
 	margin: 0 auto;
   	width: 25%;
@@ -25,13 +27,15 @@ h4{
   	margin-bottom: 0;
 }
 
+/*Cambia el estilo del id registropersona*/
 #registrarpersona{
   	float: center;
   	border-radius: .5em;
   	border: 1px solid #999;
-  	padding: 10px;
+    padding: 10px;
 }
 
+/*Cambia el diseño, marco y color del id registropersona*/
 #registrarpersona{
 	margin: 0 auto;
   	width: 25%;
@@ -43,7 +47,7 @@ h4{
   	margin-bottom: 0;
 }
 
-
+/*Cambia el diseño, color estilo del id boton crearP */
 #crearP{
 	background-color: #EEEEDA;
   	border-radius: 30px;
@@ -54,6 +58,7 @@ h4{
   	margin-right: auto;
 }
 
+/*Cambia el diseño, color estilo del id boton botonprueba */
 #botonprueba{
 	background-color: #EEEEDA;
   	border-radius: 30px;
@@ -64,6 +69,8 @@ h4{
   	margin-right: auto;
 }
 
+
+/*Cambia el diseño, color estilo del id boton botoncarta */
 #botoncarta{
 	background-color: #EEEEDA;
   	border-radius: 30px;
@@ -74,6 +81,8 @@ h4{
   	margin-right: auto;
 }
 
+
+/*Cambia el diseño, color estilo del id boton ingresado */
 #ingresado{
 	background-color: #EEEEDA;
   	border-radius: 30px;
@@ -84,21 +93,25 @@ h4{
   	margin-right: auto;
 }
 
+
+/*Cambia el diseño, tamaño, color de la clase registro(cajas de texto)*/
 .registro{
 	width: 300px;
   	height: 30px;
   	background-color: #EEEEDA;
   	border-radius: 30px;
 }
-
+/*Cambia el tipo de letra de la etiqueta body*/
 body {font-family: Arial;}
 
+/*Cambia el diseño y el estilo de la clase tab*/
 .tab {
   overflow: hidden;
   border: 1px solid #FF2E00;
   background-color: #FF4D00;
 }
 
+/*Cambia el estilo y el diseño de los botones que estan dentro de la clase tab*/
 .tab button {
   background-color: inherit;
   float: left;
@@ -110,19 +123,18 @@ body {font-family: Arial;}
   font-size: 17px;
 }
 
+/*Permite tener un efecto de sombreado sobre los botones al pasar el cursor*/
 .tab button:hover {
   background-color: #FE891A;
 }
 
+
+/*Permite hacer un cambio de color en un boton al presionarlo*/
 .tab button.active {
   background-color: #FE891A;
 }
 
-.gene{
-  height: 280px !Important;
-}
-
-
+/*Cambia el diseño y forma de la clase tabcontent definida en el tab*/
 .tabcontent {
   display: none;
   padding: 6px 12px;
@@ -130,19 +142,7 @@ body {font-family: Arial;}
   border-top: none;
 }
 
-.topright {
-  float: right;
-  cursor: pointer;
-  font-size: 28px;
-}
-
-.topright:hover {color: red;}
-
-*{
-	margin: 0px;
-	padding: 0px;
-}
-
+/*Permite agregar un fondo al index.html*/
 body{
   background-image: url("https://image.freepik.com/foto-gratis/textura-antigua-tablas-madera_1249-159.jpg");
 }

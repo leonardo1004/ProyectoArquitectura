@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="css/semantic.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/semantic.css"><!-- Permite conectar con las librerias de Semantic.css-->
+	<link rel="stylesheet" type="text/css" href="css/style.css"><!-- Permite conectar el style.css con el index -->
 	<title>Tienda_Vitual</title>
 </head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="js/semantic.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><!-- Libreria ajax -->
+<script src="js/semantic.js"></script><!-- Permite conectar con las librerias de Semantic.js-->
  <script
     src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -17,82 +17,82 @@
     <img src="img/logo.jpeg" width="228" height="190" align="left"><center><h4>Presentado por: Leonardo Quintero y Nicolas Gonzalez</h4></p><h3>Si no es barato, no es Ete Sech</h3></center>
   </div>
 	
-  <div class="tab">
+  <div class="tab"><!-- Permite la creacion de los botones principales -->
     <button class="tablinks" onclick="abrirCategoria(event, 'producto')" id="defaultOpen">Productos</button>
     <button class="tablinks" onclick="abrirCategoria(event, 'registro_producto')">Registrar Productos</button>
     <button class="tablinks" onclick="abrirCategoria(event, 'ingresar')">Ingresar</button>
   </div>
 
-  <div id="producto" class="tabcontent">
-    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <div id="producto" class="tabcontent"><!-- Permite agregar la funcionalidad del boton producto de la clase tab -->
     <center><h2>Productos</h2></center>
     <button value="OK" id="botoncarta" class="button">Mostrar</button>
-    <div id="cd" class="ui cards stackable">
+    <div id="cd" class="ui cards stackable"><!-- Se generan las cartas de los porductos -->
             
     </div>
   </div> 
  
 
-  <div id="registro_producto" class="tabcontent">
-    <div id="contenido">
+  <div id="registro_producto" class="tabcontent"><!-- Permite agregar la funcionalidad del boton registro_producto de la clase tab -->
+    <div id="contenido"><!-- Permite realizar el diseño de la etiqueta form -->
 
-      <form action="/cgi-bin/gin.py" method="POST" id="registrar">
+      <form action="/cgi-bin/gin.py" method="POST" id="registrar"><!-- Se emplea la etiqueta form para realizar la comunicacion con el documento gin.py y enviar los datos -->
         <h1><center>Registre sus producto</center></h1>
           <div>
             <h4>Usuario:</h4>
-            <input type="text" name="usuario" id="caja1" class="registro" placeholder=" Nombre" />
+            <input type="text" name="usuario" id="caja1" class="registro" placeholder=" Nombre" /><!-- Permite capturar los datos del usuario -->
           </div>
 
           <div>
             <h4>ID:</h4>
-            <input type="text" name="id" id="caja2" class="registro" placeholder=" Identidad" />
+            <input type="text" name="id" id="caja2" class="registro" placeholder=" Identidad" /><!-- Permite capturar los datos del id del usuario -->
           </div>
 
           <div>
             <h4>Producto:</h4>
-            <input type="text" name="des" id="caja3" class="registro" placeholder=" Nombre del producto"/>
+            <input type="text" name="des" id="caja3" class="registro" placeholder=" Nombre del producto"/><!-- Permite capturar los datos del nombre del producto -->
           </div>
 
           <div>
             <h4>Especificaciones:</h4>
-            <input type="text" name="espe" id="caja4" class="registro"  />
+            <input type="text" name="espe" id="caja4" class="registro"  /><!-- Permite capturar los datos de las especificaciones del prodcuto -->
           </div>
 
           <div>
             <h4>Precio:</h4>
-            <input type="text" name="precio" id="caja5" class="registro" placeholder=" Precio" />
+            <input type="text" name="precio" id="caja5" class="registro" placeholder=" Precio" /><!-- Permite capturar los datos del precio del producto -->
           </div>
 
           <div>
             <h4>Cantidad:</h4>
-            <input type="text" name="can" id="caja6" class="registro" placeholder=" Cantidad" />
+            <input type="text" name="can" id="caja6" class="registro" placeholder=" Cantidad" /><!-- Permite capturar los datos de la cantidad de un producto -->
           </div>
 
           <div>
-            <input type="submit" name="crear" id="crearP" />
+            <input type="submit" name="crear" id="crearP" /><!-- Permite enviar los datos ingresados a gin.py para almacenarlos -->
           </div>
       </form>
-        <button value="OK" id="botonprueba" class="button">Comprobar</button>
+        <button value="OK" id="botonprueba" class="button">Comprobar</button><!-- Permite comprobar si los campos estan diligenciados correctamente -->
     </div>
   </div>
 
-  <div id="ingresar" class="tabcontent">
-    <div id="login">
+  <div id="ingresar" class="tabcontent"><!-- Permite agregar la funcionalidad del boton ingresar de la clase tab -->
 
-      <form action="/cgi-bin/ingreso2.py" method="POST" id="registrarpersona">
+    <div id="login"><!-- Permite realizar el diseño de la etiqueta form -->
+
+      <form action="/cgi-bin/ingreso2.py" method="POST" id="registrarpersona"><!-- Se emplea la etiqueta form para realizar la comunicacion con el documento ingreso2.py y enviar los datos -->
         <h1><center>Registre sus producto</center></h1>
           <div>
             <h4>Usuario:</h4>
-            <input type="text" name="usuario" id="caja1" class="registro" placeholder=" Usuario" />
+            <input type="text" name="usuario" id="caja1" class="registro" placeholder=" Usuario" /><!-- Permite capturar los datos del usuario-->
           </div>
 
           <div>
             <h4>Password:</h4>
-            <input type="text" name="password" id="caja2" class="registro"  />
+            <input type="text" name="password" id="caja2" class="registro"  /><!-- Permite capturar la contraseña del usuario -->
           </div>
 
           <div>
-            <input type="submit" name="ingresado" id="ingresado" />
+            <input type="submit" name="ingresado" id="ingresado" /><!-- Permite enviar los datos ingresados a ingreso2.py para almacenarlos -->
           </div>
       </form>
     </div>

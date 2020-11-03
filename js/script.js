@@ -1,3 +1,4 @@
+//Permite el funcionamiento adecuado de la clase tab
 function abrirCategoria(evt, categoria) {
 
   var i, tabcontent, tablinks;
@@ -21,6 +22,7 @@ document.getElementById("defaultOpen").click();
 
 var productos=[];
 
+//Permite obtener el valor de los datos de la caja de texto por medio de su id y tiene un control de excepciones
 function obtenerDatos(){
   var usuario = $('#caja1').val();
   if(usuario === ''){
@@ -65,6 +67,7 @@ function obtenerDatos(){
     alert("Todo correcto, el Ete Sech lo aprueba");
   } 
 
+ //Creamos un arreglo llamado producto con los valores de cada caja de texto ingresada
   var producto={
     usuario: usuario,
     id: id,
@@ -84,6 +87,7 @@ $("#botoncarta").click(function(){
   traerDatos();
 });
 
+//Permite generar una carta con la informacion de un producto ingresada en las cajas
 function traerDatos(){
   a=obtenerDatos();
   productos.push(a);
