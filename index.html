@@ -5,6 +5,8 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css"><!-- Permite conectar el style.css con el index -->
 	<title>Tienda_Vitual</title>
 </head>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><!-- Libreria ajax -->
 <script src="js/semantic.js"></script><!-- Permite conectar con las librerias de Semantic.js-->
  <script
@@ -96,7 +98,20 @@
           </div>
       </form>
     </div>
+
   </div>
+
+  <div id="app">
+   
+  </div>
+
+  <button v-on:click="f">Presioname</button>
+
+
+<script>
+var productosVue= [];
+var opcion=true;
+</script>
 </body>
 <script src="js/script.js"></script>
 </html>
