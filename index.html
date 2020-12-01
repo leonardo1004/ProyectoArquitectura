@@ -25,13 +25,46 @@
     <button class="tablinks" onclick="abrirCategoria(event, 'ingresar')">Ingresar</button>
   </div>
 
-  <div id="producto" class="tabcontent"><!-- Permite agregar la funcionalidad del boton producto de la clase tab -->
+<div id="producto" class="tabcontent"><!-- Permite agregar la funcionalidad del boton producto de la clase tab -->
     <center><h2>Productos</h2></center>
-    <button value="OK" id="botoncarta" class="button">Mostrar</button>
-    <div id="cd" class="ui cards stackable"><!-- Se generan las cartas de los porductos -->
-            
+  <div id="app">
+      <div v-show="opcion">
+        <div class="ui three stackable cards" >
+            <div class="ui link card" v-for="usuario in usuarios" >
+                <div class="image">
+                  <img v-bind:src="usuario.avatar">
+                </div>
+                <div class="content">
+                  <a  class="header">Producto: {{usuario.producto}} Precio:</a>
+                  <a class="header">Precio: ${{usuario.precio}}</a>
+                  <a  class="header">Usuario: {{usuario.id}}</a>
+                  <div class="description">
+                    <button v-on:click="f2(usuario.producto)">
+                        Inspeccionar
+                    </button></strong>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+    <div v-show="!opcion">
+        <div class="ui link card">
+            <div class="image">
+              <img v-bind:src="user.avatar">
+            </div>
+            <div class="content">
+              <a  class="header">Usuario: {{user.data.usuario}}</a>
+              <a  class="header">Especificacion: {{user.data.especificacion}}</a>
+              <a  class="header">Cantidad: {{user.data.cantidad}}</a>
+              <a  class="header">Precio: {{user.data.precio}}</a>
+            </div>
+        </div>
+        <button v-on:click="f3">volver</button>
     </div>
+      <button v-on:click="f">Presioname</button>
   </div> 
+</div> 
  
 
   <div id="registro_producto" class="tabcontent"><!-- Permite agregar la funcionalidad del boton registro_producto de la clase tab -->
@@ -98,44 +131,7 @@
           </div>
       </form>
     </div>
-
   </div>
-
-  <div id="app">
-    <div v-show="opcion">
-        <div class="ui three stackable cards" >
-            <div class="ui link card" v-for="usuario in usuarios" >
-                <strong>
-                <div class="content">
-                  <a  class="header">Nombre: {{usuario.first_name}} {{usuario.last_name}}</a>
-                  <div class="description"></p>
-                    <button v-on:click="f2(usuario.id)">
-                        Inspeccionar
-                    </button></strong>
-                  </div>
-                </div>
-              </div>
-        </div>
-</div>
-
-    <div v-show="!opcion">
-        <div class="ui link card">
-            <div class="image">
-              <img v-bind:src="user.data.avatar">
-            </div><strong>
-            <div class="content">
-            <a  class="header">ID Usuario: {{user.data.id}}</p></a>
-              <a  class="header">Primer Nombre: {{user.data.first_name}}</p></a>
-              <a  class="header">Segundo Nombre: {{user.data.last_name}}</p></a>
-                <a  class="header">Correo: {{user.data.email}}</a></strong>
-            </div>
-          </div>
-        <button v-on:click="f3">volver</button>
-    </div>
-    <center><h3>Bienvenido</h3></center>
-    <button v-on:click="f">Presioname</button>
-
-</div>
 <script>
 var usuarios= [];
 var opcion=true;
