@@ -102,24 +102,42 @@
   </div>
 
   <div id="app">
-     <div v-show="opcion">
+    <div v-show="opcion">
         <div class="ui three stackable cards" >
-            <div class="ui link card" v-for="producto in productosVue" >
+            <div class="ui link card" v-for="usuario in usuarios" >
                 <strong>
                 <div class="content">
-                  <a  class="header">Nombre: {{producto.first_name}} {{producto.last_name}}</a>
+                  <a  class="header">Nombre: {{usuario.first_name}} {{usuario.last_name}}</a>
                   <div class="description"></p>
+                    <button v-on:click="f2(usuario.id)">
+                        Inspeccionar
+                    </button></strong>
                   </div>
                 </div>
               </div>
         </div>
-  </div>
+</div>
 
-  <button v-on:click="f">Presioname</button>
+    <div v-show="!opcion">
+        <div class="ui link card">
+            <div class="image">
+              <img v-bind:src="user.data.avatar">
+            </div><strong>
+            <div class="content">
+            <a  class="header">ID Usuario: {{user.data.id}}</p></a>
+              <a  class="header">Primer Nombre: {{user.data.first_name}}</p></a>
+              <a  class="header">Segundo Nombre: {{user.data.last_name}}</p></a>
+                <a  class="header">Correo: {{user.data.email}}</a></strong>
+            </div>
+          </div>
+        <button v-on:click="f3">volver</button>
+    </div>
+    <center><h3>Bienvenido</h3></center>
+    <button v-on:click="f">Presioname</button>
 
-
+</div>
 <script>
-var productosVue= [];
+var usuarios= [];
 var opcion=true;
 var url='http://ec2-54-146-65-4.compute-1.amazonaws.com:5000/ping';
 var user={data:"",support:""};
@@ -139,6 +157,19 @@ var app = new Vue({
                 console.log(`GET list users`, users);
             })
             .catch(error => console.error(error));
+        },
+        f2: function(id){
+            axios.get(url+id)
+            .then(response => {
+                const user = response.data;
+                this.user = user
+                console.log(`GET user`, user);
+            })
+            .catch(error => console.error(error));
+            this.opcion=false;
+        },
+        f3: function(){
+            this.opcion=true;
         }
      }
 })
