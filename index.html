@@ -102,7 +102,18 @@
   </div>
 
   <div id="app">
-   
+     <div v-show="opcion">
+        <div class="ui three stackable cards" >
+            <div class="ui link card" v-for="usuario in usuarios" >
+                <strong>
+                <div class="content">
+                  <a  class="header">Nombre: {{usuario.author}} {{usuario.title}}</a>
+                  <div class="description"></p>
+                   
+                  </div>
+                </div>
+              </div>
+        </div>
   </div>
 
   <button v-on:click="f">Presioname</button>
@@ -111,6 +122,27 @@
 <script>
 var productosVue= [];
 var opcion=true;
+var url='http://ec2-54-146-65-4.compute-1.amazonaws.com:5000/ping';
+var user={data:"",support:""};
+var app = new Vue({
+     el: '#app',
+     data: {
+       usuarios:usuarios,
+       user:user,
+       opcion:opcion
+     },
+     methods: {
+        f: function(){
+            axios.get(url)
+            .then(response => {
+                const users = response.data.data;
+                this.usuarios = users;
+                console.log(`GET list users`, users);
+            })
+            .catch(error => console.error(error));
+        }
+     }
+})
 </script>
 </body>
 <script src="js/script.js"></script>
