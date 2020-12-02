@@ -69,6 +69,17 @@ h4{
   	margin-right: auto;
 }
 
+/*Cambia el diseño, color estilo de la etiqueta button */
+button{
+  background-color: #EEEEDA;
+    border-radius: 30px;
+    width: 100px;
+    height: 40px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 /*Cambia el diseño, color estilo del id boton botoncarta */
 #botoncarta{

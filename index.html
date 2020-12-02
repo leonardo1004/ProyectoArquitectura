@@ -23,23 +23,22 @@
     <button class="tablinks" onclick="abrirCategoria(event, 'producto')" id="defaultOpen">Productos</button>
     <button class="tablinks" onclick="abrirCategoria(event, 'registro_producto')">Registrar Productos</button>
     <button class="tablinks" onclick="abrirCategoria(event, 'ingresar')">Ingresar</button>
-    <button class="tablinks" onclick="abrirCategoria(event, 'categorias')">Categorias</button>
   </div>
 
 <div id="producto" class="tabcontent"><!-- Permite agregar la funcionalidad del boton producto de la clase tab -->
-    <center><h2>Productos</h2></center>
-  <div id="app">
-      <div v-show="opcion">
-        <div class="ui three stackable cards" >
-            <div class="ui link card" v-for="usuario in usuarios" >
+    <center><h2>Productos</h2></center><!-- Mensaje de entrada -->
+  <div id="app"><!-- Div app lo empleamos como container para o que usamos de Vue.js  -->
+      <div v-show="opcion"><!-- Nos permite mostrar el elemento -->
+        <div class="ui three stackable cards" ><!-- Nos muestra el contenedor de la carta generada por la libreria Semantic -->
+            <div class="ui link card" v-for="usuario in usuarios" ><!-- Usamos v-for para mostrar nuestra lista de elementos usuarios -->
                 <div class="image">
-                  <img v-bind:src="usuario.avatar">
+                  <img v-bind:src="usuario.avatar"><!-- Nos permite generar la imagen  -->
                 </div>
-                <div class="content">
+                <div class="content"><!-- En este div generamos nuestro contenido de la carta con Vue.js -->
                   <a  class="header">Producto: {{usuario.producto}} Precio:</a>
                   <a class="header">Precio: ${{usuario.precio}}</a>
                   <a  class="header">Vendedor: {{usuario.usuario}}</a>
-                  <div class="description">
+                  <div class="description"><!-- Este div contiene el boton con el que llamamos por id nuestros productos en la url de python-->
                     <button v-on:click="f2(usuario.producto)">
                         Inspeccionar
                     </button></strong>
@@ -49,21 +48,21 @@
         </div>
       </div>
 
-    <div v-show="!opcion">
-        <div class="ui link card">
+    <div v-show="!opcion"><!-- Nos permite mostrar el elemento de manera condicional-->
+        <div class="ui link card"><!-- Crea una carta de la libreria Semantic que contendra nuestros datos -->
             <div class="image">
               <img v-bind:src="user.avatar">
             </div>
-            <div class="content">
+            <div class="content"><!-- Contiene nuestro contenido para mostrar en la carta -->
               <a  class="header">Usuario: {{user.data.usuario}}</a>
               <a  class="header">Especificacion: {{user.data.especificacion}}</a>
               <a  class="header">Cantidad: {{user.data.cantidad}}</a>
               <a  class="header">Precio: {{user.data.precio}}</a>
             </div>
         </div>
-        <button v-on:click="f3">volver</button>
+        <button v-on:click="f3">volver</button><!-- EL boton nos permite volver despues de inspeccionar nuestro contenido de la carta-->
     </div>
-      <button v-on:click="f">Presioname</button>
+      <button v-on:click="f">Presioname</button><!-- El boton nos permite generar por medio de la funcion f nuestra lista de productos -->
   </div> 
 </div> 
  
@@ -138,19 +137,19 @@
     <center><h2>Productos</h2></center>
 </div> 
 <script>
-var usuarios= [];
-var opcion=true;
-var url='http://ec2-54-210-107-10.compute-1.amazonaws.com:5000/ping';
-var user={data:"",support:""};
-var app = new Vue({
-     el: '#app',
-     data: {
+var usuarios= [];//Nos permite almacenar nuestro contenido
+var opcion=true;// Permite tener arriba el v-show
+var url='http://ec2-54-210-107-10.compute-1.amazonaws.com:5000/ping';//Nuestra url que cambia cada vez que iniciamos nuestra maquina
+var user={data:"",support:""};//Creacion variable
+var app = new Vue({//Nos permitira hacer nuestra programacion con Vue.js
+     el: '#app',//LLamamos el div que vamos a emplear 
+     data: {//Creaos un objeto data
        usuarios:usuarios,
        user:user,
        opcion:opcion
      },
-     methods: {
-        f: function(){
+     methods: {//Creamos nuestros metodos los cuales seran ejecutados en los botones mencionados anteriormente
+        f: function(){//Genera los productos
             axios.get(url)
             .then(response => {
                 const users = response.data.data;
@@ -159,7 +158,7 @@ var app = new Vue({
             })
             .catch(error => console.error(error));
         },
-        f2: function(id){
+        f2: function(id){//Permite inspeccionar por id
             axios.get(url+id)
             .then(response => {
                 const user = response.data;
@@ -169,12 +168,12 @@ var app = new Vue({
             .catch(error => console.error(error));
             this.opcion=false;
         },
-        f3: function(){
+        f3: function(){//Permite volver 
             this.opcion=true;
         }
      }
 })
 </script>
 </body>
-<script src="js/script.js"></script>
+<script src="js/script.js"></script><!-- Permite realizar la conexion nuestro js -->
 </html>
