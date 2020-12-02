@@ -39,7 +39,7 @@
                   <a class="header">Precio: ${{usuario.precio}}</a>
                   <a  class="header">Vendedor: {{usuario.usuario}}</a>
                   <div class="description"><!-- Este div contiene el boton con el que llamamos por id nuestros productos en la url de python-->
-                    <button v-on:click="f2(usuario.producto)">
+                    <button v-on:click="f2(usuario.producto)" id="inspeccionar">
                         Inspeccionar
                     </button></strong>
                   </div>
@@ -60,9 +60,10 @@
               <a  class="header">Precio: {{user.data.precio}}</a>
             </div>
         </div>
-        <button v-on:click="f3">volver</button><!-- EL boton nos permite volver despues de inspeccionar nuestro contenido de la carta-->
+        <button v-on:click="f3" id="volver">volver</button><!-- EL boton nos permite volver despues de inspeccionar nuestro contenido de la carta-->
     </div>
-      <button v-on:click="f">Presioname</button><!-- El boton nos permite generar por medio de la funcion f nuestra lista de productos -->
+    <br></br>
+      <button v-on:click="f" id="mostrar">Presioname</button><!-- El boton nos permite generar por medio de la funcion f nuestra lista de productos -->
   </div> 
 </div> 
  
